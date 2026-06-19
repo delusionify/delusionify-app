@@ -117,22 +117,22 @@ export default function WorkflowPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 to-slate-900">
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-slate-800 bg-slate-950/95 backdrop-blur-xl">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between gap-2 md:gap-4">
           <button
             onClick={() => router.push('/')}
-            className="hover:opacity-80 transition-opacity"
+            className="hover:opacity-80 transition-opacity flex-shrink-0"
           >
             <Image
               src="/delusionify_white_logo.png"
               alt="Delusionify Logo"
-              width={180}
-              height={50}
-              className="h-24 w-auto"
+              width={140}
+              height={40}
+              className="h-14 md:h-24 w-auto"
             />
           </button>
 
           {/* Step Indicators */}
-          <div className="hidden sm:flex items-center gap-4">
+          <div className="hidden sm:flex items-center gap-2 md:gap-4">
             <div className={`step-indicator ${currentStep >= 1 ? 'active' : ''}`}>
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
@@ -205,7 +205,7 @@ export default function WorkflowPage() {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-12 max-w-2xl">
+      <main className="container mx-auto px-4 py-8 md:py-12 max-w-2xl">
         {currentStep === 1 && (
           <SelfieUploadStep onSuccess={handleSelfieUploadSuccess} isLoading={isLoading} />
         )}
@@ -215,12 +215,12 @@ export default function WorkflowPage() {
         )}
 
         {currentStep === 3 && generationType && (
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             <button
               onClick={handleGenerationTypeBack}
-              className="flex items-center gap-2 text-slate-400 hover:text-slate-100 transition-colors mb-4"
+              className="flex items-center gap-2 text-slate-400 hover:text-slate-100 transition-colors mb-3 md:mb-4 text-sm md:text-base"
             >
-              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="h-4 md:h-5 w-4 md:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               Back
@@ -234,7 +234,7 @@ export default function WorkflowPage() {
         )}
 
         {error && (
-          <div className="mt-8 rounded-xl border border-red-900/50 bg-red-900/10 p-4">
+          <div className="mt-6 md:mt-8 rounded-xl border border-red-900/50 bg-red-900/10 p-4 text-sm md:text-base">
             <p className="text-red-300">{error}</p>
           </div>
         )}

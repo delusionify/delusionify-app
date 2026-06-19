@@ -60,11 +60,11 @@ export default function BeforeAfterSlider({ before, after, title }: SliderProps)
   }, [isDragging])
 
   return (
-    <div className="space-y-4">
-      {title && <h3 className="text-lg font-semibold text-slate-100 text-center">{title}</h3>}
+    <div className="space-y-3 md:space-y-4">
+      {title && <h3 className="text-base md:text-lg font-semibold text-slate-100 text-center">{title}</h3>}
       <div
         ref={containerRef}
-        className="relative w-full h-64 md:h-96 rounded-xl overflow-visible cursor-col-resize select-none"
+        className="relative w-full h-48 md:h-96 rounded-xl overflow-visible cursor-col-resize select-none touch-none"
         onMouseMove={handleMouseMove}
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}

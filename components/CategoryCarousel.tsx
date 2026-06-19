@@ -5,74 +5,222 @@ import Image from 'next/image'
 
 interface Category {
   name: string
+  category: string
   examples: Array<{
-    before: string
-    after: string
+    image: string
+    label: string
   }>
 }
 
 const CATEGORIES: Category[] = [
   {
-    name: 'Founder Pack',
+    name: 'Luxury Hotels',
+    category: '5star_hotels',
     examples: [
-      { before: '/placeholder-before-1.jpg', after: '/placeholder-after-1.jpg' },
-      { before: '/placeholder-before-2.jpg', after: '/placeholder-after-2.jpg' },
+      { image: '/templates/5star_hotels/hotel_selfie.jpg', label: 'Hotel Luxury' },
+      { image: '/templates/5star_hotels/hotel_selfie_2.jpg', label: 'Suite' },
+      { image: '/templates/5star_hotels/selfie_hotel_3.jpg', label: 'Penthouse' },
+      { image: '/templates/5star_hotels/crown_plaza.jpg', label: 'Lobby' },
     ],
   },
   {
-    name: 'Luxury Pack',
+    name: 'Exotic Beaches',
+    category: 'beaches',
     examples: [
-      { before: '/placeholder-before-3.jpg', after: '/placeholder-after-3.jpg' },
-      { before: '/placeholder-before-4.jpg', after: '/placeholder-after-4.jpg' },
+      { image: '/templates/beaches/bali_selfie.jpg', label: 'Bali Paradise' },
+      { image: '/templates/beaches/miami_beach_selfie.jpg', label: 'Miami Beach' },
+      { image: '/templates/beaches/selfie_beach.jpg', label: 'Beach Life' },
+      { image: '/templates/beaches/bali_beach_2.jpg', label: 'Tropical' },
     ],
   },
   {
-    name: 'Travel Pack',
+    name: 'Adventure',
+    category: 'exotic_locations',
     examples: [
-      { before: '/placeholder-before-5.jpg', after: '/placeholder-after-5.jpg' },
-      { before: '/placeholder-before-6.jpg', after: '/placeholder-after-6.jpg' },
+      { image: '/templates/exotic_locations/safari_quad.webp', label: 'Safari' },
+      { image: '/templates/exotic_locations/grand_canyon_selfie.jpg', label: 'Grand Canyon' },
+      { image: '/templates/exotic_locations/elephant_selfie.jpg', label: 'Wildlife' },
+      { image: '/templates/exotic_locations/rhino_selfie.jpg', label: 'Exotic Trip' },
     ],
   },
   {
-    name: 'Adventure Pack',
+    name: 'Famous Landmarks',
+    category: 'famous_landmarks',
     examples: [
-      { before: '/placeholder-before-1.jpg', after: '/placeholder-after-1.jpg' },
-      { before: '/placeholder-before-2.jpg', after: '/placeholder-after-2.jpg' },
+      { image: '/templates/famous_landmarks/venice selfie.jpg', label: 'Venice' },
+      { image: '/templates/famous_landmarks/sphi9nx selfie.jpg', label: 'Egypt' },
+      { image: '/templates/famous_landmarks/taj mahal.jpg', label: 'Asia' },
+      { image: '/templates/famous_landmarks/eiffle_tower.jpg', label: 'Europe' },
     ],
   },
   {
-    name: 'Celebrity Pack',
+    name: 'Helicopter Tours',
+    category: 'helicopters',
     examples: [
-      { before: '/placeholder-before-3.jpg', after: '/placeholder-after-3.jpg' },
-      { before: '/placeholder-before-4.jpg', after: '/placeholder-after-4.jpg' },
+      { image: '/templates/helicopters/heli1.jpg', label: 'Scenic Flight' },
+      { image: '/templates/helicopters/heli2.jpg', label: 'Sky View' },
+      { image: '/templates/helicopters/heli3.jpg', label: 'Aerial Tour' },
+      { image: '/templates/helicopters/heli4.jpg', label: 'Heli Ride' },
     ],
   },
   {
-    name: 'Elite Pack',
+    name: 'Private Jets',
+    category: 'private_jets',
     examples: [
-      { before: '/placeholder-before-5.jpg', after: '/placeholder-after-5.jpg' },
-      { before: '/placeholder-before-6.jpg', after: '/placeholder-after-6.jpg' },
+      { image: '/templates/private_jets/images (1).jpg', label: 'Jet Interior' },
+      { image: '/templates/private_jets/images (2).jpg', label: 'Luxury Cabin' },
+      { image: '/templates/private_jets/images (3).jpg', label: 'First Class' },
+      { image: '/templates/private_jets/images (4).jpg', label: 'Sky Lounge' },
     ],
   },
   {
-    name: 'Exotic Pack',
+    name: 'Superyachts',
+    category: 'yachts',
     examples: [
-      { before: '/placeholder-before-1.jpg', after: '/placeholder-after-1.jpg' },
-      { before: '/placeholder-before-2.jpg', after: '/placeholder-after-2.jpg' },
+      { image: '/templates/yachts/images (1).jpg', label: 'Yacht Deck' },
+      { image: '/templates/yachts/images (2).jpg', label: 'Sea Voyage' },
+      { image: '/templates/yachts/images (3).jpg', label: 'Yacht Party' },
+      { image: '/templates/yachts/images (5).jpg', label: 'Ocean Luxury' },
     ],
   },
   {
-    name: 'VIP Pack',
+    name: 'Fine Dining',
+    category: 'restaurants',
     examples: [
-      { before: '/placeholder-before-3.jpg', after: '/placeholder-after-3.jpg' },
-      { before: '/placeholder-before-4.jpg', after: '/placeholder-after-4.jpg' },
+      { image: '/templates/restaurants/images (1).jpg', label: 'Michelin Star' },
+      { image: '/templates/restaurants/images (2).jpg', label: 'Gourmet' },
+      { image: '/templates/restaurants/images (3).jpg', label: 'Luxury Dining' },
+      { image: '/templates/restaurants/images (4).jpg', label: 'Fine Wine' },
     ],
   },
   {
-    name: 'Premium Pack',
+    name: 'Mansions',
+    category: 'mansions',
     examples: [
-      { before: '/placeholder-before-5.jpg', after: '/placeholder-after-5.jpg' },
-      { before: '/placeholder-before-6.jpg', after: '/placeholder-after-6.jpg' },
+      { image: '/templates/mansions/images (1).jpg', label: 'Grand Mansion' },
+      { image: '/templates/mansions/images (2).jpg', label: 'Luxury Estate' },
+      { image: '/templates/mansions/images (3).jpg', label: 'Dream Home' },
+      { image: '/templates/mansions/images (4).jpg', label: 'Palace' },
+    ],
+  },
+  {
+    name: 'Penthouse',
+    category: 'penthouse_apartments',
+    examples: [
+      { image: '/templates/penthouse_apartments/images (1).jpg', label: 'City View' },
+      { image: '/templates/penthouse_apartments/images (2).jpg', label: 'Skyline' },
+      { image: '/templates/penthouse_apartments/images (3).jpg', label: 'Rooftop' },
+      { image: '/templates/penthouse_apartments/images (4).jpg', label: 'Luxury Apt' },
+    ],
+  },
+  {
+    name: 'Infinity Pools',
+    category: 'infinity_pools',
+    examples: [
+      { image: '/templates/infinity_pools/images (1).jpg', label: 'Infinity Edge' },
+      { image: '/templates/infinity_pools/images (2).jpg', label: 'Pool Paradise' },
+      { image: '/templates/infinity_pools/images (3).jpg', label: 'Sky Pool' },
+      { image: '/templates/infinity_pools/images (4).jpg', label: 'Resort' },
+    ],
+  },
+  {
+    name: 'Supercars',
+    category: 'supercars',
+    examples: [
+      { image: '/templates/supercars/images (1).jpg', label: 'Ferrari' },
+      { image: '/templates/supercars/images (2).jpg', label: 'Lamborghini' },
+      { image: '/templates/supercars/images (3).jpg', label: 'Sports Car' },
+      { image: '/templates/supercars/images (4).jpg', label: 'Luxury Auto' },
+    ],
+  },
+  {
+    name: 'Ski Resorts',
+    category: 'ski_resorts',
+    examples: [
+      { image: '/templates/ski_resorts/images (1).jpg', label: 'Alpine' },
+      { image: '/templates/ski_resorts/images (2).jpg', label: 'Snow Peak' },
+      { image: '/templates/ski_resorts/images (3).jpg', label: 'Winter Sport' },
+      { image: '/templates/ski_resorts/images (4).jpg', label: 'Ski Lodge' },
+    ],
+  },
+  {
+    name: 'Casinos',
+    category: 'casinos',
+    examples: [
+      { image: '/templates/casinos/casino_1.jpg', label: 'Vegas Night' },
+      { image: '/templates/casinos/casino_2.jpg', label: 'Poker Table' },
+      { image: '/templates/casinos/las_vegas.jpg', label: 'Las Vegas' },
+      { image: '/templates/casinos/poker.jpg', label: 'High Stakes' },
+    ],
+  },
+  {
+    name: 'Luxury Spas',
+    category: 'spas',
+    examples: [
+      { image: '/templates/spas/images (1).jpg', label: 'Wellness' },
+      { image: '/templates/spas/images (2).jpg', label: 'Spa Retreat' },
+      { image: '/templates/spas/images (3).jpg', label: 'Relaxation' },
+      { image: '/templates/spas/images (4).jpg', label: 'Massage' },
+    ],
+  },
+  {
+    name: 'Art Galleries',
+    category: 'art_galleries',
+    examples: [
+      { image: '/templates/art_galleries/art_gallery_selfie_2.webp', label: 'Gallery' },
+      { image: '/templates/art_galleries/art_gallery.jpg', label: 'Museum' },
+      { image: '/templates/art_galleries/art_2.jpg', label: 'Fine Art' },
+      { image: '/templates/art_galleries/art_3.jpg', label: 'Exhibition' },
+    ],
+  },
+  {
+    name: 'Jet Ski',
+    category: 'jetski',
+    examples: [
+      { image: '/templates/jetski/images (1).jpg', label: 'Water Sports' },
+      { image: '/templates/jetski/images (2).jpg', label: 'Speed Boat' },
+      { image: '/templates/jetski/images (3).jpg', label: 'Ocean Fun' },
+      { image: '/templates/jetski/images (4).jpg', label: 'Adrenaline' },
+    ],
+  },
+  {
+    name: 'Mountains',
+    category: 'mountains',
+    examples: [
+      { image: '/templates/mountains/images (1).jpg', label: 'Peak' },
+      { image: '/templates/mountains/images (2).jpg', label: 'Summit' },
+      { image: '/templates/mountains/images (3).jpg', label: 'Alpine' },
+      { image: '/templates/mountains/images (4).jpg', label: 'Landscape' },
+    ],
+  },
+  {
+    name: 'Luxury Pools',
+    category: 'pools',
+    examples: [
+      { image: '/templates/pools/images (1).jpg', label: 'Pool Party' },
+      { image: '/templates/pools/images (2).jpg', label: 'Resort Pool' },
+      { image: '/templates/pools/images (3).jpg', label: 'Swim' },
+      { image: '/templates/pools/images (4).jpg', label: 'Aquatic' },
+    ],
+  },
+  {
+    name: 'Wine Cellars',
+    category: 'wine_cellars',
+    examples: [
+      { image: '/templates/wine_cellars/images (1).jpg', label: 'Vintage' },
+      { image: '/templates/wine_cellars/images (2).jpg', label: 'Cellar' },
+      { image: '/templates/wine_cellars/images (3).jpg', label: 'Wine' },
+      { image: '/templates/wine_cellars/images (4).jpg', label: 'Collection' },
+    ],
+  },
+  {
+    name: 'Luxury Car Interiors',
+    category: 'luxury_car_interiors',
+    examples: [
+      { image: '/templates/luxury_car_interiors/images (1).jpg', label: 'Bentley' },
+      { image: '/templates/luxury_car_interiors/images (2).jpg', label: 'Rolls Royce' },
+      { image: '/templates/luxury_car_interiors/images (3).jpg', label: 'Interior' },
+      { image: '/templates/luxury_car_interiors/images (4).jpg', label: 'Luxury' },
     ],
   },
 ]
@@ -122,41 +270,31 @@ export default function CategoryCarousel() {
   }, [])
 
   return (
-    <div className="space-y-8">
-      <h2 className="text-3xl md:text-4xl font-bold gradient-text text-center">Featured Categories</h2>
+    <div className="space-y-6 md:space-y-8 px-2 md:px-0">
+      <h2 className="text-2xl md:text-4xl font-bold gradient-text text-center">Featured Categories</h2>
 
       <div className="relative overflow-hidden">
         {/* Carousel */}
         <div
           ref={carouselRef}
-          className="flex gap-8 overflow-x-auto scroll-smooth pb-4 px-4"
+          className="flex gap-4 md:gap-8 overflow-x-auto scroll-smooth pb-4 px-2 md:px-4 touch-pan-x"
           style={{ scrollBehavior: 'smooth', scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {CATEGORIES.map((category) => (
             <div key={category.name} className="flex-shrink-0 w-full md:w-1/3">
-              <div className="relative group glow-card p-6 space-y-4 rounded-2xl border border-purple-600/40 bg-slate-900/80 backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-purple-600/60">
-                <h3 className="text-xl font-bold text-slate-100 group-hover:text-purple-300 transition-colors">
+              <div className="relative group glow-card p-4 md:p-6 space-y-3 md:space-y-4 rounded-2xl border border-purple-600/40 bg-slate-900/80 backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-purple-600/60">
+                <h3 className="text-base md:text-xl font-bold text-slate-100 group-hover:text-purple-300 transition-colors">
                   {category.name}
                 </h3>
-                <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-2 md:gap-3">
                   {category.examples.map((example, idx) => (
-                    <div key={idx} className="flex gap-3">
-                      {/* Before */}
-                      <div className="flex-1 relative h-32 rounded-lg overflow-hidden bg-slate-800 border border-purple-600/20 group-hover:border-purple-600/60 transition-all">
+                    <div key={idx} className="relative group">
+                      <div className="relative h-24 md:h-32 rounded-lg overflow-hidden bg-slate-800 border border-purple-600/20 group-hover:border-purple-600/60 transition-all">
                         <Image
-                          src={example.before}
-                          alt={`${category.name} before example ${idx + 1}`}
+                          src={example.image}
+                          alt={example.label}
                           fill
-                          className="object-cover"
-                        />
-                      </div>
-                      {/* After */}
-                      <div className="flex-1 relative h-32 rounded-lg overflow-hidden bg-slate-800 border border-purple-600/20 group-hover:border-purple-600/60 transition-all">
-                        <Image
-                          src={example.after}
-                          alt={`${category.name} after example ${idx + 1}`}
-                          fill
-                          className="object-cover"
+                          className="object-cover group-hover:scale-110 transition-transform duration-300"
                         />
                       </div>
                     </div>

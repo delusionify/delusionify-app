@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
+import { FloatingBackgroundImages } from '@/components/FloatingBackgroundImages'
+import { AnimatedStars } from '@/components/AnimatedStars'
 import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Delusionify - Reality Transformation Platform',
   description: 'Transform yourself into any lifestyle or scenario with AI',
   viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
@@ -16,7 +22,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className="bg-gradient-to-br from-slate-950 to-slate-900">{children}</body>
+        <body className="bg-gradient-to-br from-slate-950 to-slate-900 relative">
+          <FloatingBackgroundImages />
+          <AnimatedStars />
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   )

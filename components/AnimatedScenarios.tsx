@@ -48,10 +48,10 @@ export function AnimatedScenarios() {
   }, [displayText, currentScenarioIndex, isDeleting])
 
   return (
-    <div className="text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto leading-relaxed h-10 flex items-center justify-center font-medium">
+    <div className="text-base sm:text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto leading-relaxed h-8 md:h-10 flex items-center justify-center font-medium px-2 py-4 md:py-6">
       <span className="relative">
         {displayText}
-        <span className="animate-sparkle absolute -top-1 -right-3 text-purple-400">✨</span>
+        <span className="animate-sparkle absolute -top-1 -right-2 md:-right-3 text-lg md:text-xl">✨</span>
       </span>
     </div>
   )

@@ -119,6 +119,25 @@ export default function SignInPage() {
           fill: rgb(226, 232, 240) !important;
           stroke: rgb(226, 232, 240) !important;
         }
+
+        :global(.cl-socialButtonsBlockButton img) {
+          display: block !important;
+          width: 20px !important;
+          height: 20px !important;
+          object-fit: contain !important;
+        }
+
+        :global(.cl-socialButtonsBlockButton__icon) {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+
+        :global(.cl-button__icon) {
+          width: 20px !important;
+          height: 20px !important;
+          display: block !important;
+        }
       `}</style>
     </div>
   )

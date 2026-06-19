@@ -18,9 +18,10 @@ export function FeatureFlipCard({ title, description, icon, steps }: FeatureFlip
 
   return (
     <div
-      className="relative w-full h-80 cursor-pointer"
+      className="relative w-full h-96 md:h-80 cursor-pointer touch-none"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
+      onTouchStart={() => setIsFlipped(!isFlipped)}
       style={{
         perspective: '1000px',
         transformStyle: 'preserve-3d',

@@ -511,7 +511,7 @@ export default function Page() {
 
               {/* Center - Copyright */}
               <p className="text-xs md:text-sm text-slate-500">
-                © 2024 Delusionify. Transform your reality with premium AI.
+                © 2026 Delusionify. Transform your reality with premium AI.
               </p>
 
               {/* Right - Social Icons */}

@@ -120,7 +120,7 @@ export default function LegalPage() {
               </div>
 
               <p className="text-sm text-slate-500">
-                © 2024 Delusionify. Transform your reality with premium AI.
+                © 2026 Delusionify. Transform your reality with premium AI.
               </p>
 
               <div className="flex gap-4 mt-6 md:mt-0">

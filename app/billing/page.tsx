@@ -176,7 +176,7 @@ export default async function BillingPage() {
       <footer className="border-t border-slate-800 mt-16 py-8">
         <div className="container mx-auto px-4">
           <p className="text-center text-sm text-slate-500">
-            © 2024 Delusionify. Transform your reality with premium AI.
+            © 2026 Delusionify. Transform your reality with premium AI.
           </p>
         </div>
       </footer>

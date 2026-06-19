@@ -138,6 +138,20 @@ export default function SignInPage() {
           height: 20px !important;
           display: block !important;
         }
+
+        :global(.cl-socialButtonsBlockButton svg) {
+          filter: brightness(1) !important;
+        }
+
+        :global(.cl-socialButtonsBlockButton > span svg) {
+          color: white !important;
+          fill: white !important;
+        }
+
+        :global(.cl-socialButtonsBlockButton__icon svg) {
+          width: 100% !important;
+          height: 100% !important;
+        }
       `}</style>
     </div>
   )

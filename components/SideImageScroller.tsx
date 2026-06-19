@@ -9,29 +9,29 @@ interface SideScrollerProps {
 }
 
 const LEFT_IMAGES = [
-  '/templates/yachts/images (1).jpg',
-  '/templates/supercars/images (1).jpg',
-  '/templates/private_jets/images (1).jpg',
-  '/templates/mansions/images (1).jpg',
-  '/templates/penthouse_apartments/images (1).jpg',
-  '/templates/ski_resorts/images (1).jpg',
-  '/templates/helicopters/heli1.jpg',
-  '/templates/infinity_pools/images (1).jpg',
-  '/templates/casinos/casino_1.jpg',
-  '/templates/spas/images (1).jpg',
+  '/templates/yachts/1.jpg',
+  '/templates/supercars/1.jpg',
+  '/templates/private_jets/1.jpg',
+  '/templates/mansions/1.jpg',
+  '/templates/penthouse_apartments/1.jpg',
+  '/templates/ski_resorts/1.jpg',
+  '/templates/helicopters/1.jpg',
+  '/templates/infinity_pools/1.jpg',
+  '/templates/casinos/1.jpg',
+  '/templates/spas/1.jpg',
 ]
 
 const RIGHT_IMAGES = [
-  '/templates/5star_hotels/hotel_selfie.jpg',
-  '/templates/beaches/bali_selfie.jpg',
-  '/templates/exotic_locations/safari_quad.webp',
-  '/templates/famous_landmarks/venice selfie.jpg',
-  '/templates/art_galleries/art_gallery_selfie_2.webp',
-  '/templates/luxury_car_interiors/images (1).jpg',
-  '/templates/jetski/images (1).jpg',
-  '/templates/mountains/images (1).jpg',
-  '/templates/pools/images (1).jpg',
-  '/templates/wine_cellars/images (1).jpg',
+  '/templates/5star_hotels/1.jpg',
+  '/templates/beaches/1.jpg',
+  '/templates/exotic_locations/1.jpg',
+  '/templates/famous_landmarks/1.jpg',
+  '/templates/art_galleries/1.jpg',
+  '/templates/luxury_car_interiors/1.jpg',
+  '/templates/jetski/1.jpg',
+  '/templates/mountains/1.jpg',
+  '/templates/pools/1.jpg',
+  '/templates/wine_cellars/1.jpg',
 ]
 
 export function SideImageScroller({ direction, images = 'left' }: SideScrollerProps) {

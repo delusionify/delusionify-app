@@ -337,8 +337,13 @@ export default function Page() {
                 },
                 {
                   number: 3,
+                  title: 'Face Detection',
+                  description: 'AI extracts and analyzes your face embedding',
+                },
+                {
+                  number: 4,
                   title: 'Generate',
-                  description: 'AI creates your transformation in seconds',
+                  description: 'InsightFace swaps your face into the template seamlessly',
                 },
               ]}
             />

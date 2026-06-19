@@ -111,19 +111,20 @@ export default function SignInPage() {
         }
 
         :global(.cl-socialButtonsBlockButton svg) {
-          color: rgb(226, 232, 240) !important;
-          fill: rgb(226, 232, 240) !important;
+          color: white !important;
+          fill: white !important;
+          filter: brightness(0) invert(1) !important;
         }
 
         :global(.cl-socialButtonsBlockButton svg path) {
-          fill: rgb(226, 232, 240) !important;
-          stroke: rgb(226, 232, 240) !important;
+          fill: white !important;
+          stroke: white !important;
         }
 
         :global(.cl-socialButtonsBlockButton img) {
-          display: block !important;
-          width: 20px !important;
-          height: 20px !important;
+          filter: brightness(0) invert(1) !important;
+          width: 24px !important;
+          height: 24px !important;
           object-fit: contain !important;
         }
 
@@ -131,26 +132,37 @@ export default function SignInPage() {
           display: flex !important;
           align-items: center !important;
           justify-content: center !important;
+          background: transparent !important;
         }
 
         :global(.cl-button__icon) {
-          width: 20px !important;
-          height: 20px !important;
-          display: block !important;
-        }
-
-        :global(.cl-socialButtonsBlockButton svg) {
-          filter: brightness(1) !important;
+          width: 24px !important;
+          height: 24px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
         }
 
         :global(.cl-socialButtonsBlockButton > span svg) {
           color: white !important;
           fill: white !important;
+          filter: brightness(0) invert(1) !important;
         }
 
         :global(.cl-socialButtonsBlockButton__icon svg) {
-          width: 100% !important;
-          height: 100% !important;
+          width: 24px !important;
+          height: 24px !important;
+          filter: brightness(0) invert(1) !important;
+        }
+
+        /* Ensure icons are visible */
+        :global(.cl-socialButtonsBlockButton [role="img"]) {
+          background-color: transparent !important;
+        }
+
+        :global(.cl-socialButtonsBlockButton:hover img),
+        :global(.cl-socialButtonsBlockButton:hover svg) {
+          filter: brightness(0) invert(1) !important;
         }
       `}</style>
     </div>
